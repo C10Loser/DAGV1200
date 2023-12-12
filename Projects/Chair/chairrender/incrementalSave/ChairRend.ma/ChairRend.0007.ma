@@ -1,11 +1,11 @@
 //Maya ASCII 2024 scene
 //Name: ChairRend.ma
-//Last modified: Tue, Dec 12, 2023 02:27:14 PM
+//Last modified: Tue, Dec 12, 2023 01:45:30 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
-		 -nodeType "aiStandardSurface" "mtoa" "5.3.1.1";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
+		 "mtoa" "5.3.1.1";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "C408B6A6-4AF1-DA4F-2C67-82B5104C02BB";
+fileInfo "UUID" "2F829545-4E10-C30D-CD1D-67B37E7BF090";
 createNode transform -s -n "persp";
 	rename -uid "368E0E5C-4F5F-C533-E036-5B801DE231B1";
 	setAttr ".v" no;
@@ -462,7 +462,6 @@ createNode transform -n "transform1" -p "b4";
 	setAttr ".v" no;
 createNode transform -n "chair";
 	rename -uid "0955ACC3-43DA-5456-6AC2-72B30B8656A8";
-	setAttr ".t" -type "double3" 0 -0.7027534010627523 0 ;
 	setAttr ".rp" -type "double3" -0.011274138744194584 3.8477325655885797 0.011274215034658752 ;
 	setAttr ".sp" -type "double3" -0.011274138744194584 3.8477325655885797 0.011274215034658752 ;
 createNode mesh -n "chair" -p "|chair";
@@ -1613,10 +1612,11 @@ createNode transform -n "maincam";
 createNode camera -n "maincamShape" -p "maincam";
 	rename -uid "85F2C958-4EB9-6A85-F520-A19314CECCA7";
 	setAttr -k off ".v";
+	setAttr ".rnd" no;
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
-	setAttr ".coi" 42.700474406554555;
+	setAttr ".coi" 32.310416001201986;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
@@ -1648,9 +1648,8 @@ createNode renderLayer -n "defaultRenderLayer";
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "80DAB313-4060-3379-8D2E-5793E5AED06B";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
-	setAttr -s 3 ".aovs";
 	setAttr ".version" -type "string" "5.3.1.1";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=maincamShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1  1;Background.Offset=0  0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1  1;Foreground.Offset=0  0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1  1;Background.Offset=0  0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1  1;Foreground.Offset=0  0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "EB4D635C-4D03-3DE1-C7DD-32829D5A86A9";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -1717,16 +1716,8 @@ createNode lambert -n "lambert2";
 	setAttr ".c" -type "float3" 0.4817 0.32499999 0.6631 ;
 createNode shadingEngine -n "lambert2SG";
 	rename -uid "74F9C965-4A08-A424-20DD-F1A431C03A5B";
-	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-	setAttr -s 3 ".aovs";
-	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
-	setAttr ".aovs[1].aov_name" -type "string" "emission";
-	setAttr ".aovs[2].aov_name" -type "string" "Z";
-	setAttr ".aal" -type "attributeAlias" {"ai_aov_diffuse","aiCustomAOVs[0].aovName"
-		,"ai_aov_emission","aiCustomAOVs[1].aovName","ai_aov_Z","aiCustomAOVs[2].aovName"
-		} ;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "9B7C2A62-49B0-06D0-107B-4CAD5E8C9F5B";
 createNode lambert -n "chairmaterialrr";
@@ -1734,16 +1725,8 @@ createNode lambert -n "chairmaterialrr";
 	setAttr ".c" -type "float3" 0.1654 0.38350001 0.37959999 ;
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "C6042164-422F-61ED-9E4A-B48EC4E27080";
-	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-	setAttr -s 3 ".aovs";
-	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
-	setAttr ".aovs[1].aov_name" -type "string" "emission";
-	setAttr ".aovs[2].aov_name" -type "string" "Z";
-	setAttr ".aal" -type "attributeAlias" {"ai_aov_diffuse","aiCustomAOVs[0].aovName"
-		,"ai_aov_emission","aiCustomAOVs[1].aovName","ai_aov_Z","aiCustomAOVs[2].aovName"
-		} ;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "935975E2-45B9-C3C6-7BE8-8B8483B2A8FC";
 createNode aiStandardSurface -n "chairshader";
@@ -1751,16 +1734,8 @@ createNode aiStandardSurface -n "chairshader";
 	setAttr ".emission_color" -type "float3" 0 0 0 ;
 createNode shadingEngine -n "aiStandardSurface1SG";
 	rename -uid "E4CEA46A-4D16-8435-EA74-338154DC73F2";
-	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-	setAttr -s 3 ".aovs";
-	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
-	setAttr ".aovs[1].aov_name" -type "string" "emission";
-	setAttr ".aovs[2].aov_name" -type "string" "Z";
-	setAttr ".aal" -type "attributeAlias" {"ai_aov_diffuse","aiCustomAOVs[0].aovName"
-		,"ai_aov_emission","aiCustomAOVs[1].aovName","ai_aov_Z","aiCustomAOVs[2].aovName"
-		} ;
 createNode materialInfo -n "materialInfo3";
 	rename -uid "E6B566F3-47BF-9748-B612-27A16AB472AA";
 createNode file -n "file1";
@@ -1792,7 +1767,7 @@ createNode place2dTexture -n "place2dTexture4";
 createNode bump2d -n "bump2d1";
 	rename -uid "1EB2C181-4E44-65D8-13C3-688EAF4EB9BE";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 3.9999999e-05 0 ;
+	setAttr ".vc1" -type "float3" 0 2.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode animCurveTA -n "chair_rotateX";
 	rename -uid "BA111412-43C6-429C-8166-5AA06F346D31";
@@ -1840,7 +1815,7 @@ createNode animCurveTA -n "chair_rotateZ2";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 0 72 0;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "8C6EB037-4D4C-2FDE-D3B5-1999BF33DD2D";
+	rename -uid "D8E61E87-41E1-09D0-6789-4984BED3A400";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -1848.809450344437 -0.37661488172789503 ;
 	setAttr ".tgi[0].vh" -type "double2" -978.3848312311502 532.51945087912861 ;
@@ -1881,24 +1856,9 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[11].x" -1120;
 	setAttr ".tgi[0].ni[11].y" 35.714286804199219;
 	setAttr ".tgi[0].ni[11].nvs" 1923;
-createNode aiAOV -n "aiAOV_diffuse";
-	rename -uid "4C5EF52A-44C3-AB53-358B-6CABC17B2D01";
-	setAttr ".aovn" -type "string" "diffuse";
-	setAttr ".aovt" 5;
-createNode aiAOV -n "aiAOV_emission";
-	rename -uid "FE5A6A6D-4820-E8ED-617A-CB85B9971AE2";
-	setAttr ".aovn" -type "string" "emission";
-	setAttr ".aovt" 5;
-createNode aiAOV -n "aiAOV_Z";
-	rename -uid "37B0FC36-4D03-E8B2-2965-98A6EF8DA1DA";
-	setAttr ".aovn" -type "string" "Z";
-	setAttr ".aovt" 4;
-createNode aiAOVFilter -n "aiAOVFilter1";
-	rename -uid "779D2C55-4A31-DE10-12C8-499C52D7DFE7";
-	setAttr ".ai_translator" -type "string" "closest";
 select -ne :time1;
-	setAttr ".o" 71;
-	setAttr ".unw" 71;
+	setAttr ".o" 4;
+	setAttr ".unw" 4;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1924,39 +1884,16 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".aovs";
-	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
-	setAttr ".aovs[1].aov_name" -type "string" "emission";
-	setAttr ".aovs[2].aov_name" -type "string" "Z";
-	setAttr ".aal" -type "attributeAlias" {"ai_aov_diffuse","aiCustomAOVs[0].aovName"
-		,"ai_aov_emission","aiCustomAOVs[1].aovName","ai_aov_Z","aiCustomAOVs[2].aovName"
-		} ;
 select -ne :initialParticleSE;
-	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".aovs";
-	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
-	setAttr ".aovs[1].aov_name" -type "string" "emission";
-	setAttr ".aovs[2].aov_name" -type "string" "Z";
-	setAttr ".aal" -type "attributeAlias" {"ai_aov_diffuse","aiCustomAOVs[0].aovName"
-		,"ai_aov_emission","aiCustomAOVs[1].aovName","ai_aov_Z","aiCustomAOVs[2].aovName"
-		} ;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
-	setAttr ".outf" 51;
-	setAttr ".imfkey" -type "string" "exr";
-	setAttr ".an" yes;
-	setAttr ".ef" 71;
-	setAttr ".pff" yes;
-	setAttr ".peie" 0;
-	setAttr ".ifp" -type "string" "chairend";
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
-	setAttr ".dar" 1.7769999504089355;
 select -ne :defaultLightSet;
 	setAttr -s 3 ".dsm";
 select -ne :defaultColorMgtGlobals;
@@ -1992,9 +1929,6 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
-connectAttr "aiAOV_diffuse.msg" ":defaultArnoldRenderOptions.aovs" -na;
-connectAttr "aiAOV_emission.msg" ":defaultArnoldRenderOptions.aovs" -na;
-connectAttr "aiAOV_Z.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "lambert2.oc" "lambert2SG.ss";
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "lambert2.msg" "materialInfo1.m";
@@ -2123,12 +2057,6 @@ connectAttr "bump2d1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10
 		;
 connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
-connectAttr ":defaultArnoldDriver.msg" "aiAOV_diffuse.out[0].drvr";
-connectAttr ":defaultArnoldFilter.msg" "aiAOV_diffuse.out[0].ftr";
-connectAttr ":defaultArnoldDriver.msg" "aiAOV_emission.out[0].drvr";
-connectAttr ":defaultArnoldFilter.msg" "aiAOV_emission.out[0].ftr";
-connectAttr ":defaultArnoldDriver.msg" "aiAOV_Z.out[0].drvr";
-connectAttr "aiAOVFilter1.msg" "aiAOV_Z.out[0].ftr";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "aiStandardSurface1SG.pa" ":renderPartition.st" -na;

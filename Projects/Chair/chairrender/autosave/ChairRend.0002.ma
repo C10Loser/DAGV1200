@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: ChairRend.ma
-//Last modified: Tue, Dec 12, 2023 02:27:14 PM
+//Name: ChairRend.0002.ma
+//Last modified: Tue, Dec 12, 2023 02:20:58 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,8 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "C408B6A6-4AF1-DA4F-2C67-82B5104C02BB";
+fileInfo "UUID" "112CAE48-4B39-19C7-A277-C0979BFF6A7A";
+fileInfo "exportedFrom" "C:/Users/c10lo/OneDrive/Documents/xgen/DAGV1200/Projects/Chair/chairrender/ChairRend.ma";
 createNode transform -s -n "persp";
 	rename -uid "368E0E5C-4F5F-C533-E036-5B801DE231B1";
 	setAttr ".v" no;
@@ -1881,24 +1882,9 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[11].x" -1120;
 	setAttr ".tgi[0].ni[11].y" 35.714286804199219;
 	setAttr ".tgi[0].ni[11].nvs" 1923;
-createNode aiAOV -n "aiAOV_diffuse";
-	rename -uid "4C5EF52A-44C3-AB53-358B-6CABC17B2D01";
-	setAttr ".aovn" -type "string" "diffuse";
-	setAttr ".aovt" 5;
-createNode aiAOV -n "aiAOV_emission";
-	rename -uid "FE5A6A6D-4820-E8ED-617A-CB85B9971AE2";
-	setAttr ".aovn" -type "string" "emission";
-	setAttr ".aovt" 5;
-createNode aiAOV -n "aiAOV_Z";
-	rename -uid "37B0FC36-4D03-E8B2-2965-98A6EF8DA1DA";
-	setAttr ".aovn" -type "string" "Z";
-	setAttr ".aovt" 4;
-createNode aiAOVFilter -n "aiAOVFilter1";
-	rename -uid "779D2C55-4A31-DE10-12C8-499C52D7DFE7";
-	setAttr ".ai_translator" -type "string" "closest";
 select -ne :time1;
-	setAttr ".o" 71;
-	setAttr ".unw" 71;
+	setAttr ".o" 24;
+	setAttr ".unw" 24;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1988,13 +1974,6 @@ relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet
 relationship "shadowLink" ":lightLinker1" "aiStandardSurface1SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
-connectAttr "aiAOV_diffuse.msg" ":defaultArnoldRenderOptions.aovs" -na;
-connectAttr "aiAOV_emission.msg" ":defaultArnoldRenderOptions.aovs" -na;
-connectAttr "aiAOV_Z.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "lambert2.oc" "lambert2SG.ss";
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "lambert2.msg" "materialInfo1.m";
@@ -2123,12 +2102,6 @@ connectAttr "bump2d1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10
 		;
 connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
-connectAttr ":defaultArnoldDriver.msg" "aiAOV_diffuse.out[0].drvr";
-connectAttr ":defaultArnoldFilter.msg" "aiAOV_diffuse.out[0].ftr";
-connectAttr ":defaultArnoldDriver.msg" "aiAOV_emission.out[0].drvr";
-connectAttr ":defaultArnoldFilter.msg" "aiAOV_emission.out[0].ftr";
-connectAttr ":defaultArnoldDriver.msg" "aiAOV_Z.out[0].drvr";
-connectAttr "aiAOVFilter1.msg" "aiAOV_Z.out[0].ftr";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "aiStandardSurface1SG.pa" ":renderPartition.st" -na;
@@ -2152,4 +2125,4 @@ connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "spotLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "directionalLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "directionalLight2.iog" ":defaultLightSet.dsm" -na;
-// End of ChairRend.ma
+// End of ChairRend.0002.ma
