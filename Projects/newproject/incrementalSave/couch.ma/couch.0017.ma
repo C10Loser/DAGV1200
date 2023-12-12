@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: couch.ma
-//Last modified: Tue, Dec 12, 2023 01:03:59 PM
+//Last modified: Tue, Dec 12, 2023 01:00:06 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,22 +13,22 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "B9AE4846-43FA-639D-A7FB-9FAFD0DE5138";
+fileInfo "UUID" "88C13568-46C5-BBDD-30A6-8FABA198E126";
 createNode transform -s -n "persp";
 	rename -uid "7787D2BC-490B-C87F-6630-5783AAA8E7D5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -16.515068237778362 8.8454261730440198 16.712774653245756 ;
-	setAttr ".r" -type "double3" -10.799999999999629 -42.000000000003119 0 ;
-	setAttr ".rpt" -type "double3" -5.528365218137006e-15 -8.418742383950716e-16 1.5906873130581411e-15 ;
+	setAttr ".t" -type "double3" -1.0768073862370551 8.4254355987730989 34.761681526492985 ;
+	setAttr ".r" -type "double3" -2.4000000000251713 718.79999999999768 1.2426767119850508e-17 ;
+	setAttr ".rpt" -type "double3" -7.3016220240636282e-16 -7.6069096335991969e-16 7.9994201372221037e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "73BE4174-4F96-1EF1-81B1-C788CA50D6F7";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 23.823730993617435;
+	setAttr ".coi" 38.418654910871865;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 1.3213562996241397e-14 24.6318692970124 0 ;
+	setAttr ".tp" -type "double3" -7.6320317764091543 2.8805438184719532 0.0086630284786224365 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "BAA34DA8-4813-2490-AF67-06B7DDB50E3A";
@@ -4546,7 +4546,7 @@ createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "59839977-4F53-403F-3EE5-38BA4934A3DE";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
 	setAttr ".version" -type "string" "5.3.1.1";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1   1;Background.Offset=0   0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1   1;Foreground.Offset=0   0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1   1;Background.Offset=0   0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1   1;Foreground.Offset=0   0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "9D737D7C-41B3-06AD-A1DE-AFB37745A626";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -4787,7 +4787,7 @@ createNode deleteComponent -n "deleteComponent2";
 	rename -uid "7D409D49-45FD-832B-6F22-2FB30BDAFF8E";
 	setAttr ".dc" -type "componentList" 1 "f[0]";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "4D1FB948-4268-A87D-3DA1-EC9FD1153143";
+	rename -uid "19EF538D-4D45-55AF-07DF-139B92AD8E8A";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" 949.73970868100264 -126.580512721761 ;
 	setAttr ".tgi[0].vh" -type "double2" 2196.1682305809541 636.51469505079774 ;
