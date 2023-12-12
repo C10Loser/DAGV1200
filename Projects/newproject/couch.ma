@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: couch.ma
-//Last modified: Tue, Dec 12, 2023 03:51:18 PM
+//Last modified: Tue, Dec 12, 2023 04:08:04 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "1E5C636E-43DD-73E0-7876-83B65277398E";
+fileInfo "UUID" "7D13180B-42F0-5EC4-4F37-A1A8BF0ECB43";
 createNode transform -s -n "persp";
 	rename -uid "7787D2BC-490B-C87F-6630-5783AAA8E7D5";
 	setAttr ".v" no;
@@ -4622,20 +4622,20 @@ parent -s -nc -r -add "|f2|transform14|f2" "transform5" ;
 parent -s -nc -r -add "|f2|transform14|f2" "transform10" ;
 parent -s -nc -r -add "|p1|transform9|pShape1" "transform11" ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "476B509F-479E-993B-6EC0-DD9AA0CBD543";
+	rename -uid "CF2712B3-4719-E286-E009-0F81DF93931C";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3BC1025D-4C26-65DA-8409-DF847DB57EBA";
+	rename -uid "024E048D-4846-E8EE-D031-938796D51FCD";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0CF0B246-4175-85C4-430C-338C28B2415F";
+	rename -uid "0329146B-456C-25B9-F0A9-B5BCAE775A7A";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0A710E9C-4EF0-48CA-D590-CD851700C3C4";
+	rename -uid "04033F82-4384-8E93-DDE6-67960D2E07A0";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "25B7FD62-4B8A-76F2-C9DF-96A661BFA77A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1F9A8968-4F72-B616-3979-8D975231DB17";
+	rename -uid "A9110869-4AE0-2E7E-32D4-0785B3AFF4F4";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E749CCAA-4C09-7086-A26E-F3BB68DCC3C0";
 	setAttr ".g" yes;
@@ -4831,6 +4831,7 @@ createNode place2dTexture -n "place2dTexture7";
 	rename -uid "14CF6194-4816-085E-331C-8F96CB9AEFE3";
 createNode file -n "file8";
 	rename -uid "9E8BCFB7-4888-0D48-E14C-F1BFE11B6923";
+	setAttr ".ail" yes;
 	setAttr ".ftn" -type "string" "C:/Users/c10lo/OneDrive/Documents/ExtraDAGV/paintexports/couch/couchex_lambert4SG_Roughness.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture8";
@@ -4883,117 +4884,6 @@ createNode deleteComponent -n "deleteComponent1";
 createNode deleteComponent -n "deleteComponent2";
 	rename -uid "7D409D49-45FD-832B-6F22-2FB30BDAFF8E";
 	setAttr ".dc" -type "componentList" 1 "f[0]";
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "4D1FB948-4268-A87D-3DA1-EC9FD1153143";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" 949.73970868100264 -126.580512721761 ;
-	setAttr ".tgi[0].vh" -type "double2" 2196.1682305809541 636.51469505079774 ;
-	setAttr -s 35 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 27.142856597900391;
-	setAttr ".tgi[0].ni[0].y" 285.71429443359375;
-	setAttr ".tgi[0].ni[0].nvs" 2387;
-	setAttr ".tgi[0].ni[1].x" 375.71429443359375;
-	setAttr ".tgi[0].ni[1].y" 285.71429443359375;
-	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" -587.14288330078125;
-	setAttr ".tgi[0].ni[2].y" -300;
-	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" -280;
-	setAttr ".tgi[0].ni[3].y" -277.14285278320312;
-	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" 1457.142822265625;
-	setAttr ".tgi[0].ni[4].y" 308.57144165039062;
-	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" 1150;
-	setAttr ".tgi[0].ni[5].y" 285.71429443359375;
-	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" -894.28570556640625;
-	setAttr ".tgi[0].ni[6].y" -322.85714721679688;
-	setAttr ".tgi[0].ni[6].nvs" 1923;
-	setAttr ".tgi[0].ni[7].x" 1457.142822265625;
-	setAttr ".tgi[0].ni[7].y" 660;
-	setAttr ".tgi[0].ni[7].nvs" 1923;
-	setAttr ".tgi[0].ni[8].x" 1150;
-	setAttr ".tgi[0].ni[8].y" 637.14288330078125;
-	setAttr ".tgi[0].ni[8].nvs" 1923;
-	setAttr ".tgi[0].ni[9].x" 1702.857177734375;
-	setAttr ".tgi[0].ni[9].y" -712.85711669921875;
-	setAttr ".tgi[0].ni[9].nvs" 1923;
-	setAttr ".tgi[0].ni[10].x" 2010;
-	setAttr ".tgi[0].ni[10].y" -680;
-	setAttr ".tgi[0].ni[10].nvs" 1923;
-	setAttr ".tgi[0].ni[11].x" -280;
-	setAttr ".tgi[0].ni[11].y" 371.42855834960938;
-	setAttr ".tgi[0].ni[11].nvs" 1923;
-	setAttr ".tgi[0].ni[12].x" -587.14288330078125;
-	setAttr ".tgi[0].ni[12].y" 348.57144165039062;
-	setAttr ".tgi[0].ni[12].nvs" 1923;
-	setAttr ".tgi[0].ni[13].x" 1395.7142333984375;
-	setAttr ".tgi[0].ni[13].y" -560;
-	setAttr ".tgi[0].ni[13].nvs" 1923;
-	setAttr ".tgi[0].ni[14].x" 2010;
-	setAttr ".tgi[0].ni[14].y" -527.14288330078125;
-	setAttr ".tgi[0].ni[14].nvs" 1923;
-	setAttr ".tgi[0].ni[15].x" -587.14288330078125;
-	setAttr ".tgi[0].ni[15].y" -2.8571429252624512;
-	setAttr ".tgi[0].ni[15].nvs" 1923;
-	setAttr ".tgi[0].ni[16].x" -280;
-	setAttr ".tgi[0].ni[16].y" 20;
-	setAttr ".tgi[0].ni[16].nvs" 1923;
-	setAttr ".tgi[0].ni[17].x" 2112.857177734375;
-	setAttr ".tgi[0].ni[17].y" 574.28570556640625;
-	setAttr ".tgi[0].ni[17].nvs" 1923;
-	setAttr ".tgi[0].ni[18].x" 1764.2857666015625;
-	setAttr ".tgi[0].ni[18].y" 574.28570556640625;
-	setAttr ".tgi[0].ni[18].nvs" 2387;
-	setAttr ".tgi[0].ni[19].x" 1702.857177734375;
-	setAttr ".tgi[0].ni[19].y" -537.14288330078125;
-	setAttr ".tgi[0].ni[19].nvs" 1923;
-	setAttr ".tgi[0].ni[20].x" 1471.4285888671875;
-	setAttr ".tgi[0].ni[20].y" 538.5714111328125;
-	setAttr ".tgi[0].ni[20].nvs" 2066;
-	setAttr ".tgi[0].ni[21].x" -587.14288330078125;
-	setAttr ".tgi[0].ni[21].y" 172.85714721679688;
-	setAttr ".tgi[0].ni[21].nvs" 1923;
-	setAttr ".tgi[0].ni[22].x" 1150;
-	setAttr ".tgi[0].ni[22].y" 461.42855834960938;
-	setAttr ".tgi[0].ni[22].nvs" 1923;
-	setAttr ".tgi[0].ni[23].x" 1457.142822265625;
-	setAttr ".tgi[0].ni[23].y" 484.28570556640625;
-	setAttr ".tgi[0].ni[23].nvs" 1923;
-	setAttr ".tgi[0].ni[24].x" -280;
-	setAttr ".tgi[0].ni[24].y" 195.71427917480469;
-	setAttr ".tgi[0].ni[24].nvs" 1923;
-	setAttr ".tgi[0].ni[25].x" 2317.142822265625;
-	setAttr ".tgi[0].ni[25].y" -565.71429443359375;
-	setAttr ".tgi[0].ni[25].nvs" 2387;
-	setAttr ".tgi[0].ni[26].x" 2665.71435546875;
-	setAttr ".tgi[0].ni[26].y" -565.71429443359375;
-	setAttr ".tgi[0].ni[26].nvs" 1923;
-	setAttr ".tgi[0].ni[27].x" 1457.142822265625;
-	setAttr ".tgi[0].ni[27].y" 11.428571701049805;
-	setAttr ".tgi[0].ni[27].nvs" 1923;
-	setAttr ".tgi[0].ni[28].x" 1150;
-	setAttr ".tgi[0].ni[28].y" -11.428571701049805;
-	setAttr ".tgi[0].ni[28].nvs" 1923;
-	setAttr ".tgi[0].ni[29].x" 842.85711669921875;
-	setAttr ".tgi[0].ni[29].y" -34.285713195800781;
-	setAttr ".tgi[0].ni[29].nvs" 1923;
-	setAttr ".tgi[0].ni[30].x" 1702.857177734375;
-	setAttr ".tgi[0].ni[30].y" -877.14288330078125;
-	setAttr ".tgi[0].ni[30].nvs" 1923;
-	setAttr ".tgi[0].ni[31].x" 2010;
-	setAttr ".tgi[0].ni[31].y" -855.71429443359375;
-	setAttr ".tgi[0].ni[31].nvs" 1923;
-	setAttr ".tgi[0].ni[32].x" 2010;
-	setAttr ".tgi[0].ni[32].y" -1031.4285888671875;
-	setAttr ".tgi[0].ni[32].nvs" 1923;
-	setAttr ".tgi[0].ni[33].x" 1702.857177734375;
-	setAttr ".tgi[0].ni[33].y" -1052.857177734375;
-	setAttr ".tgi[0].ni[33].nvs" 1923;
-	setAttr ".tgi[0].ni[34].x" 1471.4285888671875;
-	setAttr ".tgi[0].ni[34].y" 504.28570556640625;
-	setAttr ".tgi[0].ni[34].nvs" 2066;
 createNode polyUnite -n "polyUnite1";
 	rename -uid "CA77238F-45E5-B565-8BA4-51AFCAA62F9D";
 	setAttr -s 14 ".ip";
@@ -5203,9 +5093,120 @@ createNode animCurveTA -n "couch3_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 0 72 0;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "4A7196DF-4234-9324-4C9A-46BD6CD79AFF";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -940.80409333884882 -470.58594098605317 ;
+	setAttr ".tgi[0].vh" -type "double2" 305.62442856110272 292.50926678650535 ;
+	setAttr -s 35 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 2010;
+	setAttr ".tgi[0].ni[0].y" -1031.4285888671875;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 1457.142822265625;
+	setAttr ".tgi[0].ni[1].y" 660;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 1702.857177734375;
+	setAttr ".tgi[0].ni[2].y" -1052.857177734375;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 1395.7142333984375;
+	setAttr ".tgi[0].ni[3].y" -560;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" 1702.857177734375;
+	setAttr ".tgi[0].ni[4].y" -712.85711669921875;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 375.71429443359375;
+	setAttr ".tgi[0].ni[5].y" 285.71429443359375;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" 1702.857177734375;
+	setAttr ".tgi[0].ni[6].y" -537.14288330078125;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" -280;
+	setAttr ".tgi[0].ni[7].y" -277.14285278320312;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" 1150;
+	setAttr ".tgi[0].ni[8].y" -11.428571701049805;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+	setAttr ".tgi[0].ni[9].x" 1764.2857666015625;
+	setAttr ".tgi[0].ni[9].y" 574.28570556640625;
+	setAttr ".tgi[0].ni[9].nvs" 2387;
+	setAttr ".tgi[0].ni[10].x" -280;
+	setAttr ".tgi[0].ni[10].y" 195.71427917480469;
+	setAttr ".tgi[0].ni[10].nvs" 1923;
+	setAttr ".tgi[0].ni[11].x" 2010;
+	setAttr ".tgi[0].ni[11].y" -527.14288330078125;
+	setAttr ".tgi[0].ni[11].nvs" 1923;
+	setAttr ".tgi[0].ni[12].x" 2317.142822265625;
+	setAttr ".tgi[0].ni[12].y" -565.71429443359375;
+	setAttr ".tgi[0].ni[12].nvs" 2387;
+	setAttr ".tgi[0].ni[13].x" 2404.135986328125;
+	setAttr ".tgi[0].ni[13].y" 349.39566040039062;
+	setAttr ".tgi[0].ni[13].nvs" 2066;
+	setAttr ".tgi[0].ni[14].x" 1150;
+	setAttr ".tgi[0].ni[14].y" 461.42855834960938;
+	setAttr ".tgi[0].ni[14].nvs" 1923;
+	setAttr ".tgi[0].ni[15].x" 1702.857177734375;
+	setAttr ".tgi[0].ni[15].y" -877.14288330078125;
+	setAttr ".tgi[0].ni[15].nvs" 1923;
+	setAttr ".tgi[0].ni[16].x" 2161.699462890625;
+	setAttr ".tgi[0].ni[16].y" 171.54933166503906;
+	setAttr ".tgi[0].ni[16].nvs" 2066;
+	setAttr ".tgi[0].ni[17].x" -587.14288330078125;
+	setAttr ".tgi[0].ni[17].y" -2.8571429252624512;
+	setAttr ".tgi[0].ni[17].nvs" 1923;
+	setAttr ".tgi[0].ni[18].x" -280;
+	setAttr ".tgi[0].ni[18].y" 371.42855834960938;
+	setAttr ".tgi[0].ni[18].nvs" 1923;
+	setAttr ".tgi[0].ni[19].x" 27.142856597900391;
+	setAttr ".tgi[0].ni[19].y" 285.71429443359375;
+	setAttr ".tgi[0].ni[19].nvs" 2387;
+	setAttr ".tgi[0].ni[20].x" 1150;
+	setAttr ".tgi[0].ni[20].y" 637.14288330078125;
+	setAttr ".tgi[0].ni[20].nvs" 1923;
+	setAttr ".tgi[0].ni[21].x" 842.85711669921875;
+	setAttr ".tgi[0].ni[21].y" -34.285713195800781;
+	setAttr ".tgi[0].ni[21].nvs" 1923;
+	setAttr ".tgi[0].ni[22].x" 1457.142822265625;
+	setAttr ".tgi[0].ni[22].y" 484.28570556640625;
+	setAttr ".tgi[0].ni[22].nvs" 1923;
+	setAttr ".tgi[0].ni[23].x" -894.28570556640625;
+	setAttr ".tgi[0].ni[23].y" -322.85714721679688;
+	setAttr ".tgi[0].ni[23].nvs" 1923;
+	setAttr ".tgi[0].ni[24].x" 2665.71435546875;
+	setAttr ".tgi[0].ni[24].y" -565.71429443359375;
+	setAttr ".tgi[0].ni[24].nvs" 1923;
+	setAttr ".tgi[0].ni[25].x" 2112.857177734375;
+	setAttr ".tgi[0].ni[25].y" 574.28570556640625;
+	setAttr ".tgi[0].ni[25].nvs" 1923;
+	setAttr ".tgi[0].ni[26].x" -587.14288330078125;
+	setAttr ".tgi[0].ni[26].y" 172.85714721679688;
+	setAttr ".tgi[0].ni[26].nvs" 1923;
+	setAttr ".tgi[0].ni[27].x" 2010;
+	setAttr ".tgi[0].ni[27].y" -855.71429443359375;
+	setAttr ".tgi[0].ni[27].nvs" 1923;
+	setAttr ".tgi[0].ni[28].x" 2010;
+	setAttr ".tgi[0].ni[28].y" -680;
+	setAttr ".tgi[0].ni[28].nvs" 1923;
+	setAttr ".tgi[0].ni[29].x" 1457.142822265625;
+	setAttr ".tgi[0].ni[29].y" 308.57144165039062;
+	setAttr ".tgi[0].ni[29].nvs" 1923;
+	setAttr ".tgi[0].ni[30].x" 1457.142822265625;
+	setAttr ".tgi[0].ni[30].y" 11.428571701049805;
+	setAttr ".tgi[0].ni[30].nvs" 1923;
+	setAttr ".tgi[0].ni[31].x" -587.14288330078125;
+	setAttr ".tgi[0].ni[31].y" -300;
+	setAttr ".tgi[0].ni[31].nvs" 1923;
+	setAttr ".tgi[0].ni[32].x" -587.14288330078125;
+	setAttr ".tgi[0].ni[32].y" 348.57144165039062;
+	setAttr ".tgi[0].ni[32].nvs" 1923;
+	setAttr ".tgi[0].ni[33].x" -280;
+	setAttr ".tgi[0].ni[33].y" 20;
+	setAttr ".tgi[0].ni[33].nvs" 1923;
+	setAttr ".tgi[0].ni[34].x" 1150;
+	setAttr ".tgi[0].ni[34].y" 285.71429443359375;
+	setAttr ".tgi[0].ni[34].nvs" 1923;
 select -ne :time1;
-	setAttr ".o" 60;
-	setAttr ".unw" 60;
+	setAttr ".o" 62;
+	setAttr ".unw" 62;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -5798,76 +5799,6 @@ connectAttr "uvChooser11.ov2" "bump2d3.vt2";
 connectAttr "uvChooser11.oc1" "bump2d3.vc1";
 connectAttr "polyCube1.out" "deleteComponent1.ig";
 connectAttr "deleteComponent1.og" "deleteComponent2.ig";
-connectAttr "frame1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "aiStandardSurface1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "file4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "bump2d1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "file11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "place2dTexture11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
-connectAttr "place2dTexture4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
-		;
-connectAttr "file9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
-		;
-connectAttr "place2dTexture9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
-		;
-connectAttr "place2dTexture6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
-		;
-connectAttr "file6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
-		;
-connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
-		;
-connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
-		;
-connectAttr "place2dTexture5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
-		;
-connectAttr "bump2d2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
-		;
-connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
-		;
-connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
-		;
-connectAttr "aiStandardSurface3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
-		;
-connectAttr "feet1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
-		;
-connectAttr "file5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
-		;
-connectAttr "spotLightShape1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
-		;
-connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
-		;
-connectAttr "place2dTexture10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
-		;
-connectAttr "file10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
-		;
-connectAttr "file2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[24].dn"
-		;
-connectAttr "cushions.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
-		;
-connectAttr "aiStandardSurface2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[26].dn"
-		;
-connectAttr "bump2d3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
-		;
-connectAttr "file12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[28].dn"
-		;
-connectAttr "place2dTexture12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[29].dn"
-		;
-connectAttr "place2dTexture7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[30].dn"
-		;
-connectAttr "file7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[31].dn"
-		;
-connectAttr "file8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[32].dn"
-		;
-connectAttr "place2dTexture8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[33].dn"
-		;
-connectAttr "directionalLightShape1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[34].dn"
-		;
 connectAttr "polySurfaceShape2.o" "polyUnite1.ip[0]";
 connectAttr "polySurfaceShape7.o" "polyUnite1.ip[1]";
 connectAttr "polySurfaceShape6.o" "polyUnite1.ip[2]";
@@ -5944,6 +5875,76 @@ connectAttr "couch3Shape.uvst[14].uvsn" "uvChooser11.uvs[0]";
 connectAttr "couch3Shape.uvst[6].uvsn" "uvChooser12.uvs[0]";
 connectAttr "couch3Shape.uvst[8].uvsn" "uvChooser13.uvs[0]";
 connectAttr "couch3Shape.uvst[11].uvsn" "uvChooser14.uvs[0]";
+connectAttr "file8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "file9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "place2dTexture8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "place2dTexture5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "place2dTexture6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "aiStandardSurface1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "file5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "bump2d1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "file12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "feet1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "file2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
+connectAttr "bump2d2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+		;
+connectAttr "cushions.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+		;
+connectAttr "directionalLightShape1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+		;
+connectAttr "place2dTexture10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+		;
+connectAttr "place2dTexture7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+		;
+connectAttr "spotLightShape1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+		;
+connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+		;
+connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
+		;
+connectAttr "frame1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+		;
+connectAttr "place2dTexture9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
+		;
+connectAttr "place2dTexture12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
+		;
+connectAttr "file10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
+		;
+connectAttr "place2dTexture4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
+		;
+connectAttr "aiStandardSurface2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[24].dn"
+		;
+connectAttr "aiStandardSurface3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
+		;
+connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[26].dn"
+		;
+connectAttr "file7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
+		;
+connectAttr "file6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[28].dn"
+		;
+connectAttr "file11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[29].dn"
+		;
+connectAttr "bump2d3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[30].dn"
+		;
+connectAttr "file4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[31].dn"
+		;
+connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[32].dn"
+		;
+connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[33].dn"
+		;
+connectAttr "place2dTexture11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[34].dn"
+		;
 connectAttr "lambert1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
