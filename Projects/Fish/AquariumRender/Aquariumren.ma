@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: Aquariumtex.ma
-//Last modified: Tue, Dec 12, 2023 02:31:36 PM
+//Name: Aquariumren.ma
+//Last modified: Tue, Dec 12, 2023 02:35:00 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "6A15288E-4B4C-5A73-E866-AB8756B0048D";
+fileInfo "UUID" "6587CBF3-4C75-EA10-9F6B-3EB97BBF178A";
 createNode transform -s -n "persp";
 	rename -uid "5B696DE2-4E35-F68D-1968-D892B2CC1125";
 	setAttr ".v" no;
@@ -84,14 +84,14 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -n "persp1";
 	rename -uid "28FF7216-4B79-FAB0-0411-93972630512F";
-	setAttr ".t" -type "double3" 22.326675102605503 13.702646698709714 -17.703126615415169 ;
-	setAttr ".r" -type "double3" 2502.000515298625 491.20054446664943 360.00068488671747 ;
+	setAttr ".t" -type "double3" 12.915461921915165 3.1595955495479187 -8.2323943686723791 ;
+	setAttr ".r" -type "double3" 2519.4006394921948 485.20054446713772 360.00078261830197 ;
 	setAttr ".rpt" -type "double3" 5.7335217346588565e-17 6.8838680806301219e-17 -3.2221699843639617e-16 ;
 createNode camera -n "persp1Shape" -p "persp1";
 	rename -uid "F29F61B5-4090-D965-6ABC-5BAAD6E6B662";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 31.305499160289177;
+	setAttr ".coi" 16.450603093322012;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -15098,7 +15098,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "EC001744-479C-FB1C-C56A-D78547DBDDC0";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 70 -ast 1 -aet 70 ";
 	setAttr ".st" 6;
 createNode polyCube -n "polyCube1";
 	rename -uid "EF6681A3-4232-6620-21BA-4FB464BDAD2D";
@@ -15807,6 +15807,21 @@ createNode deleteComponent -n "deleteComponent19";
 createNode deleteComponent -n "deleteComponent20";
 	rename -uid "0D8647A2-41DE-09D0-670E-F2B4AA9E1555";
 	setAttr ".dc" -type "componentList" 1 "f[2]";
+createNode animCurveTA -n "bowl2_rotateX";
+	rename -uid "C832BC61-4B39-FEA8-40BA-45AF51209769";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 72 0;
+createNode animCurveTA -n "bowl2_rotateY";
+	rename -uid "5AB51FD6-4F98-0423-62F2-31B61D2EA5F4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 72 360;
+createNode animCurveTA -n "bowl2_rotateZ";
+	rename -uid "B058C5CA-4F03-1CD4-2EDA-F1B7B7867499";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 72 0;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -15899,6 +15914,9 @@ connectAttr "groupId26.id" "polySurface1Shape.ciog.cog[0].cgid";
 connectAttr "groupId23.id" "polySurface13Shape.iog.og[0].gid";
 connectAttr "aiStandardSurface3SG.mwc" "polySurface13Shape.iog.og[0].gco";
 connectAttr "groupId24.id" "polySurface13Shape.ciog.cog[0].cgid";
+connectAttr "bowl2_rotateX.o" "bowl2.rx";
+connectAttr "bowl2_rotateY.o" "bowl2.ry";
+connectAttr "bowl2_rotateZ.o" "bowl2.rz";
 connectAttr "groupParts14.og" "bowl2Shape.i";
 connectAttr "groupId27.id" "bowl2Shape.iog.og[0].gid";
 connectAttr "lambert2SG.mwc" "bowl2Shape.iog.og[0].gco";
@@ -16531,4 +16549,4 @@ connectAttr "groupId20.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pointLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "directionalLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "spotLight1.iog" ":defaultLightSet.dsm" -na;
-// End of Aquariumtex.ma
+// End of Aquariumren.ma

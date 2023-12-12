@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: Aquariumtex.ma
-//Last modified: Tue, Dec 12, 2023 02:31:36 PM
+//Name: Aquariumren.ma
+//Last modified: Tue, Dec 12, 2023 02:32:27 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "6A15288E-4B4C-5A73-E866-AB8756B0048D";
+fileInfo "UUID" "7679332A-43E2-4748-64C0-7C8063B76C50";
 createNode transform -s -n "persp";
 	rename -uid "5B696DE2-4E35-F68D-1968-D892B2CC1125";
 	setAttr ".v" no;
@@ -16531,4 +16531,4 @@ connectAttr "groupId20.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pointLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "directionalLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "spotLight1.iog" ":defaultLightSet.dsm" -na;
-// End of Aquariumtex.ma
+// End of Aquariumren.ma
